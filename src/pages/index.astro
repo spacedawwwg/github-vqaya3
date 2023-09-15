@@ -17,6 +17,9 @@ const items = [
 
 <Layout title="Welcome to Astro.">
 		<Example items={items}>
-			{items.map(({ id }) => <p slot={id}>{id}</p>)}
+			{items.map(({ id }) => {
+				console.log(id)
+				return (<p slot={id}>{id}</p>)
+			})}
 		</Example>
 </Layout>
